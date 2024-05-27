@@ -1,0 +1,35 @@
+package codigo5;
+
+import java.util.Scanner; // importación nueva
+
+public class Codigo5 {
+	
+	public static void main(String[] args) { // se añade public static void main....
+	Scanner s = new Scanner(System.in); // corrección añadimos system.in 
+    System.out.print("Introduzca un número: "); // añadir doblecomilla
+    String ni = s.nextLine();
+    int c = Integer.parseInt(ni);
+    
+    int afo = 0;
+    int noAfo = 0;
+    
+    while (c > 0) { // se pone c porque es la constante int c de arriba
+	  int digito = (int)(c % 10); // se pone c porque es la constante int de arriba
+      if ((digito == 3) || (digito == 7) || (digito == 8) || (digito == 9)) {
+		afo++;
+      } else {
+		noAfo++;
+	  
+	 c /= 10; // se pone c porque es lo que tiene int c 
+    }
+    if (afo > noAfo) {
+      System.out.println("El " + c + " es un número afortunado."); // faltaba la t en print
+    } else {
+      System.out.println("El " + c + " no es un número afortunado.");
+    }
+    
+   }
+    
+}
+	
+}
